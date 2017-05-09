@@ -1,0 +1,29 @@
+[{
+	"host": "token-manager",
+    "port": "3000",
+	"redirects":[{
+		"path": "/api/token",
+		"to":"/token",
+		"method": "get"
+	},
+    {
+		"path": "/api/tokens",
+		"to":"/tokens",
+		"method": "get"
+	},
+	{
+		"path": "/api/tokenerr",
+		"to":"/tokenerr",
+		"method": "post"
+	}
+	]
+},
+{
+	"host": "token-create",
+    "port": "3000",
+	"redirects":[{
+		"path": "/api/create-token",
+		"to":"/",
+		"method": "get"
+	}]
+}]
