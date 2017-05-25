@@ -45,10 +45,16 @@ for(var i = 0; i < mappings.length; i++){
 
 var logger = function(req, res, next) {
     console.log("GOT REQUEST !");
+
     next(); // Passing the request to the next handler in the stack.
 }
 app.use(logger);
-
+app.use(function(req, res, next) {  
+    console.log(res.header.origin);
+      res.header('Access-Control-Allow-Origin', req.headers.origin);
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
+ });
 // starts the server
 var server = app.listen(3000, function () {
     var host = server.address().address;

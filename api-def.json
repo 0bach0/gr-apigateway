@@ -26,4 +26,49 @@
 		"to":"/",
 		"method": "get"
 	}]
+},
+{
+	"host": "page-manager",
+    "port": "3000",
+	"redirects":[{
+		"path": "/api/page",
+		"to":"/page",
+		"method": "post"
+	},
+	{
+		"path": "/api/pages",
+		"to":"/pages",
+		"method": "get"
+	},
+	{
+		"path": "/api/deletepage",
+		"to":"/deletepage",
+		"method": "post"
+	},
+	{
+		"path": "/api/searchpage",
+		"to":"/searchpage",
+		"method": "post"
+	}
+	]
+},
+{
+	"host": "elastic-service",
+    "port": "3000",
+	"redirects":[{
+		"path": "/api/posts",
+		"to":"/posts",
+		"method": "get"
+	},
+	{
+		"path": "/api/getpostbypage",
+		"to":"/getpostbypage",
+		"method": "post"
+	},
+	{
+		"path": "/api/editposttype",
+		"to":"/editposttype",
+		"method": "post"
+	}
+	]
 }]
